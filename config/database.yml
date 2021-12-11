@@ -1,0 +1,10 @@
+default: &default
+  adapter: sqlserver
+  dataserver: TOANDANG
+  username:
+  password:
+
+development:
+  <<: *default
+  port: 1433
+  database: dev_db
