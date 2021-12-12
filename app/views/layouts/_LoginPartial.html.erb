@@ -7,12 +7,11 @@
         <li class="nav-item">
             <a id="manage" class="nav-link text-dark" href= "#"><i class="bi bi-cart" style="font-size: 18px; vertical-align: middle;"></i> Giỏ hàng</a>
         </li>
-        <li class="nav-item">
-            <form id="logoutForm" class="form-inline" asp-area="Identity" href="/users/sign_out">
-                <button id="logout" type="submit" class="nav-link btn btn-link text-dark"><i class="bi bi-box-arrow-left" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng xuất</button>
-            </form>
+
+          <li class="nav-item">
+            <a id="logout" class="nav-link btn btn-link text-dark" href= "/users/sign_out" data-method="delete"><i class="bi bi-box-arrow-left" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng xuất</a>
         </li>
-     
+         
     <%= render 'layouts/AdminDropdownMenu' %>
   <% else %>
         <li class="nav-item">
