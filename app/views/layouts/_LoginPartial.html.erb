@@ -1,22 +1,25 @@
-<h1> henho layout </h1>
-<ul class="navbar">
-  <% if user_signed_in? %>
-    <li class = "nav-item">
-  <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class:"nav-link" %>
-  </li>
-  <li class = "nav-item">
-  <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" %>
-  </li>
+
+ <ul class="navbar-nav">
+   <% if user_signed_in? %>
+        <li class="nav-item">
+            <a id="manage" class="nav-link text-dark" href="/users/edit" title="Manage">Xin chào hmu!</a>
+        </li>
+        <li class="nav-item">
+            <a id="manage" class="nav-link text-dark" href= "#"><i class="bi bi-cart" style="font-size: 18px; vertical-align: middle;"></i> Giỏ hàng</a>
+        </li>
+        <li class="nav-item">
+            <form id="logoutForm" class="form-inline" asp-area="Identity" href="/users/sign_out">
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark"><i class="bi bi-box-arrow-left" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng xuất</button>
+            </form>
+        </li>
+     
     <%= render 'layouts/AdminDropdownMenu' %>
   <% else %>
-    <li class = "nav-item">
-  <%= link_to "Sign Up", new_user_registration_path, class:"nav-link" %>
-  </li>
-  <li class = "nav-item">
-  <%= link_to "Sign In", new_user_session_path, class:"nav-link" %>
-  </li>
-<% end %>
-</ul>
- 
-
- 
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="register" href="users/sign_up"><i class="bi bi-pencil-square" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng ký</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark " id="login" href="/users/sign_in"><i class="bi bi-box-arrow-in-right" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng nhập</a>
+        </li>
+   <% end %>
+</ul> 
