@@ -1,0 +1,5 @@
+#admin-item > div > a:hover {     
+    background-color: #be1e2d;      
+    color: white;
+    transition: 0.3s ease-in
+}

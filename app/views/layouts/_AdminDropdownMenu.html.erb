@@ -1,1 +1,21 @@
-<h4>drop down</h4>
+
+<li class="nav-item dropdown header-profile" id="admin-item">
+    <a class="nav-link" href="#" role="button" data-toggle="dropdown">
+        <i class="mdi mdi-account"></i>
+        <span class="ml-2" style="color: #343a40 !important; padding: 0px;">Quản lý</span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" asp-page="/Role/Index" asp-area="Admin">
+            <i class='bx bx-git-branch bx-xs'></i>
+            <span class="ml-2">Quản lý quyền </span>
+        </a>
+        <a class="dropdown-item" asp-page="/Role/User" asp-area="Admin">
+            <i class='bx bx-user-plus bx-xs'></i>
+            <span class="ml-2">Gán quyền cho User</span>
+        </a>
+        <a class="dropdown-item" asp-area="Admin" asp-controller = "Dashboards" asp-action = "Dashboard1">
+            <i class='bx bx-slider-alt bx-xs'></i>
+            <span class="ml-2">Trang quản trị </span>
+        </a>
+    </div>
+</li>

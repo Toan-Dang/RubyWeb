@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_13_144937) do
+ActiveRecord::Schema.define(version: 2021_12_13_153040) do
 
   create_table "batteries", force: :cascade do |t|
     t.integer "Capacity"
@@ -351,6 +351,15 @@ ActiveRecord::Schema.define(version: 2021_12_13_144937) do
     t.boolean "admin", default: false
     t.text "bio"
     t.bigint "role_id"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["role_id"], name: "index_users_on_role_id"
   end
