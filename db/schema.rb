@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_12_143141) do
+ActiveRecord::Schema.define(version: 2021_12_13_144937) do
 
   create_table "batteries", force: :cascade do |t|
     t.integer "Capacity"
@@ -277,6 +277,13 @@ ActiveRecord::Schema.define(version: 2021_12_12_143141) do
     t.integer "Slots"
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "roms", force: :cascade do |t|
     t.integer "Capacity"
     t.integer "MaxRom"
@@ -341,7 +348,11 @@ ActiveRecord::Schema.define(version: 2021_12_12_143141) do
     t.string "FullName"
     t.string "Address"
     t.datetime "Birthday"
+    t.boolean "admin", default: false
+    t.text "bio"
+    t.bigint "role_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "categories", "categories", column: "categories_id"
@@ -376,4 +387,5 @@ ActiveRecord::Schema.define(version: 2021_12_12_143141) do
   add_foreign_key "purchases", "staffs", column: "Staff_id"
   add_foreign_key "purchases", "suppliers", column: "Supplier_id"
   add_foreign_key "staffs", "users"
+  add_foreign_key "users", "roles"
 end
