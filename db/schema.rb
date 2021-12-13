@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_13_153040) do
+ActiveRecord::Schema.define(version: 2021_12_13_181833) do
 
   create_table "batteries", force: :cascade do |t|
     t.integer "Capacity"
@@ -111,7 +111,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_153040) do
     t.index ["Product_id"], name: "index_images_on_Product_id"
   end
 
-  create_table "invent_products", force: :cascade do |t|
+  create_table "invent_products", id: false, force: :cascade do |t|
     t.bigint "Inventory_id"
     t.bigint "Product_id"
     t.integer "ProductAvailable"
@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_153040) do
     t.boolean "IsActive"
   end
 
-  create_table "order_details", force: :cascade do |t|
+  create_table "order_details", id: false, force: :cascade do |t|
     t.bigint "Order_id"
     t.bigint "Product_id"
     t.integer "Quanlity"
@@ -185,14 +185,14 @@ ActiveRecord::Schema.define(version: 2021_12_13_153040) do
     t.float "Cache"
   end
 
-  create_table "product_contents", force: :cascade do |t|
+  create_table "product_contents", id: false, force: :cascade do |t|
     t.bigint "Product_id"
     t.bigint "Content_id"
     t.index ["Content_id"], name: "index_product_contents_on_Content_id"
     t.index ["Product_id"], name: "index_product_contents_on_Product_id"
   end
 
-  create_table "product_discounts", force: :cascade do |t|
+  create_table "product_discounts", id: false, force: :cascade do |t|
     t.bigint "Discount_id"
     t.bigint "Product_id"
     t.index ["Discount_id"], name: "index_product_discounts_on_Discount_id"
@@ -241,7 +241,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_153040) do
     t.index ["Structure_id"], name: "index_products_on_Structure_id"
   end
 
-  create_table "purchase_details", force: :cascade do |t|
+  create_table "purchase_details", id: false, force: :cascade do |t|
     t.bigint "Purchase_id"
     t.bigint "Product_id"
     t.integer "Quantity"
