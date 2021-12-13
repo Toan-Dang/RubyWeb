@@ -2,7 +2,7 @@
  <ul class="navbar-nav">
    <% if user_signed_in? %>
         <li class="nav-item">
-            <a id="manage" class="nav-link text-dark" href="/users/edit" title="Manage">Xin chào hmu!</a>
+            <a id="manage" class="nav-link text-dark" href="/users/edit" title="Manage">Xin chào !</a>
         </li>
         <li class="nav-item">
             <a id="manage" class="nav-link text-dark" href= "#"><i class="bi bi-cart" style="font-size: 18px; vertical-align: middle;"></i> Giỏ hàng</a>
@@ -15,7 +15,7 @@
     <%= render 'layouts/AdminDropdownMenu' %>
   <% else %>
         <li class="nav-item">
-            <a class="nav-link text-dark" id="register" href="users/sign_up"><i class="bi bi-pencil-square" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng ký</a>
+            <a class="nav-link text-dark" id="register" href="/users/sign_up"><i class="bi bi-pencil-square" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng ký</a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark " id="login" href="/users/sign_in"><i class="bi bi-box-arrow-in-right" style="font-size: 18px; vertical-align: middle;"></i>&nbspĐăng nhập</a>

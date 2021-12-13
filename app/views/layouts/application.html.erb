@@ -12,11 +12,13 @@
      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag "bootstrap.min.css", "site.css" %>
     <%= javascript_pack_tag 'jquery.js' %>
-    <%= javascript_pack_tag 'bootstrap.js' %>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <%= javascript_pack_tag 'site' %>
     <title>Zerone.VN</title>
   </head>
   <body>
+  <p class="notice"><%= notice %></p> 
+     <p class="alert"><%= alert %></p>
     <a id="btn-to-top">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
@@ -25,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white topnav">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <p class="logo mb-0">Zer<span style="color: #be1e2d">o</span>ne.vn</p>
                 </a>
                 <div class="input-group mb-0" style="width: 30%">
@@ -233,9 +235,9 @@
                     <a class="nav-item">Dành cho đối tác: <strong>0366.485.663</strong></a>
                 </div>
                 <div class="col-md-3 col-sm-6 sub">
-                    <a class="nav-item"><img src="/images/bocongthuong.png" style="width: 60%; height: 60%" /></a>
+                    <a class="nav-item"><img src="https://media.discordapp.net/attachments/871665355108520006/919615855816474674/bocongthuong.png" style="width: 60%; height: 60%" /></a>
                     <br />
-                    <a class="nav-item"><img src="/images/paymethod.png" style="width: 60%; height: 60%" /></a>
+                    <a class="nav-item"><img src="https://media.discordapp.net/attachments/871665355108520006/919615856198185010/paymethod.png" style="width: 60%; height: 60%" /></a>
                 </div>
             </div>
         </div>
