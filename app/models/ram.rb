@@ -1,3 +1,3 @@
 class Ram < ApplicationRecord
-    has_many :products
+    has_many :Product
 end

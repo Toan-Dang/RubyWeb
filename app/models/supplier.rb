@@ -1,3 +1,3 @@
 class Supplier < ApplicationRecord
-    has_many :purchases
+    has_many :Purchase
 end

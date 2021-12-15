@@ -1,4 +1,4 @@
 class ProductContent < ApplicationRecord
-    belongs_to :content
-	belongs_to :product
+    belongs_to :Content
+	belongs_to :Product
 end

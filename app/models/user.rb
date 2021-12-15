@@ -5,6 +5,6 @@ class User < ApplicationRecord
   :recoverable, :trackable, :rememberable, :validatable
   
 
-         has_one :customer
-         has_one :staff
+         has_one :Customer
+         has_one :Staff
 end

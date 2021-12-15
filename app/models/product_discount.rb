@@ -1,4 +1,4 @@
 class ProductDiscount < ApplicationRecord
-    belongs_to :discount
-	belongs_to :product
+    belongs_to :Discount
+	belongs_to :Product
 end

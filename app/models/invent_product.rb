@@ -1,4 +1,4 @@
 class InventProduct < ApplicationRecord
-    belongs_to :inventory
-	belongs_to :product
+    belongs_to :Inventory
+	belongs_to :Product
 end

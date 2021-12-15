@@ -1,3 +1,3 @@
 class Feedback < ApplicationRecord
-    has_one :product
+    belongs_to :Product
 end
